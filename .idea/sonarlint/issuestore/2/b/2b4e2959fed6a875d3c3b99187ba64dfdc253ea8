@@ -1,12 +1,0 @@
-
-7
-java:S1220""Move this file to a named package.8îà¡É£2
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¦²©Öþÿÿÿÿ8ûà¡É£2
-U	java:S106"9Replace this use of System.out or System.err by a logger.(·õÿ­8üà¡É£2
-U	java:S106%"9Replace this use of System.out or System.err by a logger.(ß»ÁŽ8ýà¡É£2
-Z	java:S106<"9Replace this use of System.out or System.err by a logger.(ŸæÒÓþÿÿÿÿ8ÿà¡É£2
-X	java:S125="<This block of commented-out lines of code should be removed.(º…±ø8€á¡É£2
-Z	java:S106B"9Replace this use of System.out or System.err by a logger.(æ¨¤šøÿÿÿÿ8€á¡É£2
-X	java:S125F"<This block of commented-out lines of code should be removed.(ýþ±ö8€á¡É£2
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8€á¡É£2
