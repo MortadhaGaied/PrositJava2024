@@ -4,14 +4,13 @@ public class Zoo {
     Animal[] animals;
     String name;
     String city;
-    int nbrCages;
-    int n;
+    final int nbrCages=25;
+    int n=0;
 
-    public Zoo(String name, String city, int nbrCages) {
+    public Zoo(String name, String city) {
         this.name = name;
         this.city = city;
-        this.nbrCages = nbrCages;
-        animals=new Animal[25];
+        animals=new Animal[nbrCages];
     }
     void displayZoo(){
         System.out.println("Name:"+name+" City:"+city+" NbrCages:"+nbrCages);
@@ -30,6 +29,27 @@ public class Zoo {
             System.out.println("Le zoo est plein");
             return false;
         }
+    }
+    boolean isZooFull(){
+        return n==nbrCages;
+    }
+    Zoo comparerZoo(Zoo z1, Zoo z2) {
+        /*if(z1.n>z2.n){
+            return z1;
+        }
+        else{
+            return z2;
+        }*/
+        return z1.n>z2.n ? z1 :z2;
+    }
+    Zoo comparerZoo(Zoo zoo) {
+        /*if(zoo.n>this.n){
+            return zoo;
+        }
+        else{
+            return this;
+        }*/
+        return zoo.n>this.n ? zoo :this;
     }
     public boolean removeAnimal(Animal animal){
         int index=searchAnimal(animal);

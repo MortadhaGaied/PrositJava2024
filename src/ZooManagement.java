@@ -22,7 +22,7 @@ public class ZooManagement {
         animal.setAge(-5);
 
 
-        Zoo zoo=new Zoo("Belveder","Tunis",25);
+        Zoo zoo=new Zoo("Belveder","Tunis");
         animal.afficher();
         zoo.addAnimal(animal);
         zoo.addAnimal(animal1);
@@ -40,6 +40,12 @@ public class ZooManagement {
 
         System.out.println(Animal.n);
 
+        Zoo z1=new Zoo("aaaa","aaa");
+        Zoo z2=new Zoo("bbbb","bbbb");
+        Zoo z3=new Zoo("cccc","cccc");
+        z3.comparerZoo(z2,z3);
+        z2.comparerZoo(z3);
+        z1.comparerZoo(z2);
 
 
 
