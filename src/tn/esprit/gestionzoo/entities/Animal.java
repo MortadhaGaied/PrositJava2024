@@ -1,30 +1,36 @@
-public class Animal {
-    String family;
-    String name;
+package tn.esprit.gestionzoo.entities;
+
+public class Animal{
+    private String family;
+    private String name;
     private int age;
     boolean isMammal;
-    static int n=0;
-    Animal(String family,String name,int age){
+    public static int n=0;
+
+    public Animal(String family,String name,int age){
+        super();
         this.family=family;
         this.name=name;
+
         this.age=age;
     }
-    Animal(boolean isMammal){
+    public Animal(boolean isMammal){
         this.isMammal=isMammal;
     }
-    Animal(String family,String name,int age,boolean isMammal){
+    public Animal(String family,String name,int age,boolean isMammal){
         this(family,name,age);
         this.isMammal=isMammal;
         n++;
 
     }
-    Animal(){
+    public Animal(){
 
     }
-    Animal(int age){
+
+    public Animal(int age){
         this.age=age;
     }
-    Animal(String name){
+    public Animal(String name){
         this.name=name;
     }
     public static void getNbr(){
@@ -48,17 +54,26 @@ public class Animal {
         }
 
     }
-    void afficher(){
+    public void afficher(){
         System.out.println("Family:"+family+" Name:"+name+" age:"+age+" isMammal:"+isMammal);
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "tn.esprit.gestionzoo.entities.Animal{" +
                 "family='" + family + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", isMammal=" + isMammal +
                 '}';
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+
+    public void setFamily(String family) {
+        this.family = family;
     }
 }

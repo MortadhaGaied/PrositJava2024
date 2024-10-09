@@ -1,4 +1,8 @@
+package tn.esprit.gestionzoo.main;
+
 import java.util.Scanner;
+
+import tn.esprit.gestionzoo.entities.*;
 
 public class ZooManagement {
 
@@ -46,6 +50,17 @@ public class ZooManagement {
         z3.comparerZoo(z2,z3);
         z2.comparerZoo(z3);
         z1.comparerZoo(z2);
+
+
+        Aquatiques a=new Aquatiques();
+        Terrestres t=new Terrestres();
+        Dolphin d=new Dolphin();
+        Penguin penguin=new Penguin();
+
+
+        a.swim();
+        penguin.swim();
+        d.swim();
 
 
 
