@@ -2,18 +2,31 @@ package tn.esprit.gestionzoo.entities;
 
 public class Zoo {
     private Animal[] animals;
+    public Aquatiques[] aquaticAnimals;
     private String name;
     private String city;
     final int nbrCages=25;
     int n=0;
+    int n1=0;
 
     public Zoo(String name, String city) {
         this.name = name;
         this.city = city;
         animals=new Animal[nbrCages];
+        aquaticAnimals=new Aquatiques[10];
     }
     void displayZoo(){
         System.out.println("Name:"+name+" City:"+city+" NbrCages:"+nbrCages);
+    }
+    public boolean addAquaticAnimal(Aquatiques aquatiques){
+        if(n1<10){
+            aquaticAnimals[n1]=aquatiques;
+            n1++;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public boolean addAnimal(Animal animal){
         if(!isZooFull()){
@@ -111,5 +124,30 @@ public class Zoo {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public float maxPenguinSwimmingDepth(){
+        float max=0;
+        for(int i=0;i<n1;i++){
+            if(aquaticAnimals[i] instanceof Penguin){
+                if(((Penguin) aquaticAnimals[i]).swimmingDepth>max){
+                    max=((Penguin) aquaticAnimals[i]).swimmingDepth;
+                }
+            }
+        }
+        return max;
+    }
+    public void displayNumberOfAquaticsByType(){
+        int nbd=0;
+        int nbp=0;
+        for(int i=0;i<n1;i++){
+            if(aquaticAnimals[i] instanceof Penguin){
+                nbp++;
+            }
+            if(aquaticAnimals[i] instanceof Dolphin){
+                nbd++;
+            }
+        }
+        System.out.println("Nbr dolphin="+nbd+" Nbr penguin="+nbp);
     }
 }

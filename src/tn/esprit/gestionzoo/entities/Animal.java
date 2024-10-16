@@ -76,4 +76,18 @@ public class Animal{
     public void setFamily(String family) {
         this.family = family;
     }
+    public boolean equals(Object obj){
+        if(obj instanceof Animal){
+            if(this.age==((Animal)obj).age && this.name.equals(((Animal)obj).name)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+
+    }
 }

@@ -1,5 +1,6 @@
 package tn.esprit.gestionzoo.main;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 import tn.esprit.gestionzoo.entities.*;
@@ -24,6 +25,8 @@ public class ZooManagement {
         Animal animal4=new Animal("Felidae","Lion",5,true);
         System.out.println(animal.getAge());
         animal.setAge(-5);
+        System.out.println(animal.equals(animal1));
+
 
 
         Zoo zoo=new Zoo("Belveder","Tunis");
@@ -37,10 +40,8 @@ public class ZooManagement {
         System.out.println(zoo.searchAnimal(animal));
         System.out.println(zoo.searchAnimal(animal4));
 
-        String str1="Hello";
-        String str2="Hello";
-        String str3=new String("Hello");
-        System.out.println(str1.equals(str3));
+
+
 
         System.out.println(Animal.n);
 
@@ -52,7 +53,7 @@ public class ZooManagement {
         z1.comparerZoo(z2);
 
 
-        Aquatiques a=new Aquatiques();
+        Aquatiques a=new Dolphin();
         Terrestres t=new Terrestres();
         Dolphin d=new Dolphin();
         Penguin penguin=new Penguin();
@@ -61,6 +62,40 @@ public class ZooManagement {
         a.swim();
         penguin.swim();
         d.swim();
+
+        Animal animal5=new Animal();
+
+        Animal animal6=new Terrestres();
+        if(animal6 instanceof Aquatiques){
+            ((Aquatiques)animal6).sayHello();
+        }
+
+
+
+
+
+
+        System.out.println((float)5/2);
+        String str1="Hello";
+        String str2="Hello";
+        String str3=new String("Hello");
+        System.out.println(str1.equals(str3));
+
+
+        zoo.addAquaticAnimal(a);
+        zoo.addAquaticAnimal(new Penguin());
+        zoo.addAquaticAnimal(new Dolphin());
+        for(Aquatiques aquatiques:zoo.aquaticAnimals){
+            if(aquatiques!=null){
+                aquatiques.swim();
+            }
+        }
+
+
+
+
+
+
 
 
 

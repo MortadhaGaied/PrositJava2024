@@ -9,9 +9,6 @@ public class Terrestres extends Animal{
     public Terrestres(){
 
     }
-    @Override
-    public void sound() {
-        System.out.println("aaaa");
-    }
+
 }
 
