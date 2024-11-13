@@ -1,5 +1,7 @@
 package tn.esprit.gestionzoo.main;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -19,7 +21,7 @@ public class ZooManagement {
         nbrCages=scanner.nextInt();
         System.out.printf("%s comporte %d cages",zooName,nbrCages);*/
         Animal animal=new Animal("Felidae","Lion",5,true);
-        Animal animal1=new Animal("Felidae","Lion1",5,true);
+        Animal animal1=new Animal("Felidae","Lion1",-2,true);
         Animal animal2=new Animal("Felidae","Lion2",5,true);
         Animal animal3=new Animal("Felidae","Lion3",5,true);
         Animal animal4=new Animal("Felidae","Lion",5,true);
@@ -31,11 +33,18 @@ public class ZooManagement {
 
         Zoo zoo=new Zoo("Belveder","Tunis");
         animal.afficher();
-        zoo.addAnimal(animal);
-        zoo.addAnimal(animal1);
-        zoo.addAnimal(animal2);
-        zoo.addAnimal(animal3);
-        zoo.addAnimal(animal4);
+        try {
+            zoo.addAnimal(animal);
+            zoo.addAnimal(animal1);
+            zoo.addAnimal(animal2);
+            zoo.addAnimal(animal3);
+            zoo.addAnimal(animal4);
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        }catch (InvalidAgeException e){
+            System.out.println(e.getMessage());
+        }
+
         System.out.println(zoo);
         System.out.println(zoo.searchAnimal(animal));
         System.out.println(zoo.searchAnimal(animal4));
@@ -91,6 +100,28 @@ public class ZooManagement {
             }
         }
 
+        try {
+            int tab[]=new int[4];
+            tab[5]=6;
+            System.out.println(5/0);
+        }catch (ArithmeticException e){
+            System.out.println(e.getMessage());
+        }catch (ArrayIndexOutOfBoundsException e1){
+            System.out.println(e1.getMessage());
+        }finally {
+            System.out.println("hello");
+        }
+        System.out.println("Hello");
+
+
+
+
+    Penguin p=new Penguin();
+    Terrestres terrestres=new Terrestres();
+    p.eatMeat(Food.MEAT);
+    terrestres.eatMeat(Food.MEAT);
+    terrestres.eatPlant(Food.PLANT);
+    terrestres.eatPlantAndMeet(Food.BOTH);
 
 
 

@@ -27,6 +27,7 @@ public class Animal{
 
     }
 
+
     public Animal(int age){
         this.age=age;
     }
