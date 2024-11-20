@@ -2,8 +2,7 @@ package tn.esprit.gestionzoo.main;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 import tn.esprit.gestionzoo.entities.*;
 
@@ -122,10 +121,39 @@ public class ZooManagement {
     terrestres.eatMeat(Food.MEAT);
     terrestres.eatPlant(Food.PLANT);
     terrestres.eatPlantAndMeet(Food.BOTH);
+    List<Animal> list2=new ArrayList<Animal>();
+    list2.add(new Animal());
+    list2.contains(5);
+        List<Integer> list=new ArrayList<>();
+        list.add(5);
+        list.add(2);
+        list.add(8);
+        list.add(6);
+        list.add(22);
+        list.add(1);
 
-
-
-
+        System.out.println(list);
+        System.out.println(list.contains(2));
+        System.out.println(list.contains(10));
+        list.remove(2);
+        for(Integer x:list){
+            System.out.println(x);
+        }
+        for(int i=0;i< list.size();i++){
+            System.out.println(list.get(i));//T[i]
+        }
+        Collections.sort(list);
+        System.out.println(list);
+        System.out.println("******");
+        Set<Integer> set=new HashSet<>();
+        set.add(5);
+        set.add(2);
+        set.add(8);
+        set.add(6);
+        set.add(22);
+        set.add(1);
+        set.add(22);
+        System.out.println(set);
 
 
 
