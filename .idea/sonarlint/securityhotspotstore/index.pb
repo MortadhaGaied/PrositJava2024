@@ -31,3 +31,9 @@ a
 +src/tn/esprit/gestionzoo/entities/Food.java,0\6\06d5a680283a518151d478885ec19dc186946cfb
 ^
 .src/tn/esprit/gestionzoo/entities/Penguin.java,8\b\8b3c033991f18632270ebe61a7d51e87750eaf76
+_
+/src/tn/esprit/gestionzoo/entities/IGestion.java,e\f\ef043aa85bb1277bb9d25468d957de632c9e3683
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e

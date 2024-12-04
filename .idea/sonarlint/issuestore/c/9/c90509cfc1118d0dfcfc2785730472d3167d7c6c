@@ -1,0 +1,22 @@
+
+f
+java:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã
+V
+java:S5993"9Change the visibility of this constructor to "protected".(Ï¢÷¬8è›•µ²2
+V
+java:S5993	"9Change the visibility of this constructor to "protected".(ÓáÌè8ë›•µ²2
+[
+java:S1172">Remove these unused method parameters "family", "name", "age".(Ï¢÷¬8ì©û¶²2
+N	java:S106"9Replace this use of System.out or System.err by a logger.(’——ú
+P
+java:S1161":Add the "@Override" annotation above this method signature(Á»›ê
+Q	java:S125"<This block of commented-out lines of code should be removed.(œÞµ„
+d
+java:S6201"NReplace this instanceof check and cast with 'instanceof Aquatiques aquatiques'(ë£·©
+d
+java:S6201"NReplace this instanceof check and cast with 'instanceof Aquatiques aquatiques'(ë£·©
+d
+java:S6201"NReplace this instanceof check and cast with 'instanceof Aquatiques aquatiques'(ë£·©
+\
+java:S1126"AReplace this if-then-else statement by a single return statement.(­ö¼ÿûÿÿÿÿ
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(€ààÆþÿÿÿÿ8‚””¶²2

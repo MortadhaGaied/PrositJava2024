@@ -3,6 +3,7 @@ package tn.esprit.gestionzoo.main;
 import java.io.File;
 import java.io.FileReader;
 import java.util.*;
+import java.util.function.*;
 
 import tn.esprit.gestionzoo.entities.*;
 
@@ -154,6 +155,21 @@ public class ZooManagement {
         set.add(1);
         set.add(22);
         System.out.println(set);
+        int x=3,y=2;
+        MathOperation mathOperation=(x1, x2) -> x1+x2;
+        MathOperation mathOperation1=( x5,  x6)->x5-x6;
+        Function<String,Integer> stringLength=s->s.length();
+        Consumer<String> print=s->System.out.println(s);
+        Supplier<Double> randomValue=() ->Math.random();
+        Predicate<Integer> isEven=num->num%2==0;
+        BiFunction<Integer,Integer,Integer> multiply=(integer, integer2) ->integer*integer2;
+
+
+
+
+
+
+
 
 
 
